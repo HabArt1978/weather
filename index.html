@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/styles.css"> 
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Погода</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="loading">
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__row">
+          <div class="header__city">
+            <h1 class="city__name"></h1>
+            <div class="city__inner">
+              <button class="city__change btn-reset">Сменить город</button>
+              <button class="city__location btn-reset">
+                Мое местоположение
+              </button>
+            </div>
+          </div>
+          <div class="header__units">
+            <button class="units__c btn-reset unit-current">C</button>
+            <button class="units__f btn-reset">F</button>
+          </div>
+        </div>
 
-  <script type="module" src="./js/index.js"></script>
-</body>
+        <form class="city-search city-search_hidden">
+          <input type="text" class="city-search__input" />
+          <button type="submit" class="city-search__btn">OK</button>
+          <p class="city-search__error"></p>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="weather">
+        <div class="container weather__container">
+          <div class="weather__inner">
+            <img alt="Weather icon" class="weather__icon" />
+            <h2 class="weather__temperature"></h2>
+            <span class="weather__units"></span>
+          </div>
+          <p class="weather__description"></p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>
